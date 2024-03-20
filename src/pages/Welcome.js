@@ -2,7 +2,7 @@ import React from 'react';
 import { SafeAreaView, Text } from 'react-native';
 import { StyleSheet } from 'react-native'
 
-import Button from './components/button/Button';
+import Button from '../components/button/Button';
 
 const Welcome = () => {
     return(
