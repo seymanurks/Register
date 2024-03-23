@@ -7,6 +7,7 @@ const MemberRegistered = ({route}) => {
 
     return(
         <SafeAreaView>
+            <Text style = {styles.title}>Kayıt Tamamlandı!</Text>
             <Text style = {styles.label}>Ad: {user.userName}</Text>
             <Text style = {styles.label}>Soyad: {user.userSurname}</Text>
             <Text style = {styles.label} >Yaş: {user.userAge}</Text>
@@ -21,6 +22,11 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 20,
     margin: 5,
+    },
+    title: {
+        fontWeight: "bold",
+        fontSize: 30,
+        textAlign: "center"
     }
 });
 
