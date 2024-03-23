@@ -4,11 +4,15 @@ import { StyleSheet } from 'react-native'
 
 import Button from '../components/button/Button';
 
-const Welcome = () => {
+const Welcome = ({navigation}) => {
+
+  function goToMemberSign() {
+    navigation.navigate("MemberSignScreen")
+  }
     return(
         <SafeAreaView style= {styles.container}>
             <Text style = {styles.title}>Welcome</Text>
-            <Button text="Create Membership" onPress={null}></Button>
+            <Button text="Create Membership" onPress={goToMemberSign}/>
         </SafeAreaView>
     )
 }
