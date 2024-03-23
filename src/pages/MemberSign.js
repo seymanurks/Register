@@ -14,6 +14,7 @@ const MemberSign = ({navigation}) => {
     function handleSubmit() {
         if( !userName || !userSurname || !userAge || !userMail || !userPhone) {
             Alert.alert("HATA", "Bilgiler boş bırakılamaz!")
+            return;
         }
 
         const user = {
