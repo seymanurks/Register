@@ -4,7 +4,7 @@ import { SafeAreaView, Text, Alert } from 'react-native';
 import Input from '../components/input/Input';
 import Button from '../components/button/Button';
 
-const MemberSign = () => {
+const MemberSign = ({navigation}) => {
     const [userName, setUserName] = useState(null)
     const [userSurname, setUserSurname] = useState(null)
     const [userAge, setUserAge] = useState(null)
@@ -23,7 +23,7 @@ const MemberSign = () => {
             userMail,
             userPhone
         }
-        console.log(user)
+        navigation.navigate("MemberRegisteredScreen", {user})
     }
 
    return(
