@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import { SafeAreaView, Text, Alert } from 'react-native';
 
 import Input from '../components/input/Input';
 import Button from '../components/button/Button';
 
 const MemberSign = () => {
-    const [userName, setUserName] = useState("")
-    const [userSurname, setUserSurname] = useState("")
-    const [userAge, setUserAge] = useState("")
-    const [userMail, setUserMail] = useState("")
-    const [userPhone, setUserPhone] = useState("")
+    const [userName, setUserName] = useState(null)
+    const [userSurname, setUserSurname] = useState(null)
+    const [userAge, setUserAge] = useState(null)
+    const [userMail, setUserMail] = useState(null)
+    const [userPhone, setUserPhone] = useState(null)
 
     function handleSubmit() {
+        if( !userName || !userSurname || !userAge || !userMail || !userPhone) {
+            Alert.alert("HATA", "Bilgiler boş bırakılamaz!")
+        }
+
         const user = {
             userName,
             userSurname,
